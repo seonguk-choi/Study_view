@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+#mainMenu {
+	overflow:hidden;
+	display: table;
+	margin: 0 auto;
+}
+
+#mainMenu > li {
+	float: left;
+}
+#mainMenu > li > a {
+	display: block;
+	padding: 10px 40px;
+	border: 1px solid transparent;/* transparent 투명하게 */
+	color: orange;
+	background-color: black;
+}
+.subMenu {
+	display: none;
+	text-align: center;
+	background-color: black;
+}
+.subMenu a {
+	display: block;
+	color: orange;
+	padding: 5px 0 ;
+}
+#mainMenu> li > a:hover {
+	background-color: orange;
+	color: white;
+}
+#mainMenu> li > a:hover+.subMenu {
+	display: block;
+}
+.subMenu:hover {
+	display: block;
+}
+.subMenu>li>a:hover {
+	font-size: 1.25rem;
+	background-color: orange;
+	color: white;
+}
+.subMenu>li>a:active {
+	color: #ffeb3b;
+}
+</style>
+</head>
+<body>
+	<ul id="mainMenu">
+		<li>
+			<a href="#">홈</a>
+		</li>
+		<li>
+			<a href="#">시설안내</a>
+			<ul class="subMenu">
+				<li><a href="#">메뉴1</a></li>
+				<li><a href="#">메뉴2</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">스터디존</a>
+			<ul class="subMenu">
+				<li><a href="#">오픈공간</a></li>
+				<li><a href="#">파티션</a></li>
+				<li><a href="#">앱앤다운</a></li>
+				<li><a href="#">카페존</a></li>
+				<li><a href="#">스터디룸</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">수험생</a>
+			<ul class="subMenu">
+				<li><a href="#">수험가이드</a></li>
+				<li><a href="#">합격후기</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">고등학생</a>
+			<ul class="subMenu">
+				<li><a href="#">수시준비</a></li>
+				<li><a href="#">수능준비</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="">중학생</a>
+			<ul class="subMenu">
+				<li><a href="#">학습기관</a></li>
+				<li><a href="#">기초단련</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">문의신청</a>
+			<ul class="subMenu">
+				<li><a href="#">상담신청</a></li>
+				<li><a href="#">시설예약</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">로그인</a>
+		</li>
+		<li>
+			<a href="#">회원가입</a>
+		</li>
+	</ul>
+</body>
+</html>

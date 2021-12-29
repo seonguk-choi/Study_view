@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+/* 01. 공통(PC,MOBILE)요소 정의 */
+body {
+	font:14px/1.5 "Noto Sans KR", sans-serif;
+	color: #888;
+}
+
+.blind {
+	display: none;
+}
+
+a, a:link {
+	text-decoration: none;
+	color: inherit; /* 부모 요소로부터 색상을 상속받아 사용한다 */
+}
+
+
+/* 02. 각 부분 디자인 요소 */
+/* 02-1. header */
+
+
+
+
+
+
+/* 03. 반응형 디자인/기능 요소 */
+@media screen and (min-width: 1024px){ /* pc */
+	
+}
+@media screen and (max-width: 768px){ /* 7인치 태블릿 */
+	
+}
+@media screen and (max-width: 480px){ /* 5.5인치 정도? 모바일 */
+	
+}

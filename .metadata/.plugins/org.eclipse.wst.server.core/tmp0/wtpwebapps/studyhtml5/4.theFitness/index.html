@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>The Fitness</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css?ver=1.1" /> <!-- ?ver=1.1 css 캐싱(서비스 최종 배포할때) -->
+</head>
+<body>
+	<h1 class="none">the fitness</h1>
+	<header>
+		<div class="header-wrap">
+			<div class="header-top">
+				<div id="logo">
+					<a href="#">
+						<img src="images/logo.gif" alt="the fitness" />
+					</a>
+				</div>
+				<nav>
+					<ul id="tnb"><!-- top navigation bar : tnb -->
+						<li><a href="#">home</a></li>
+						<li><a href="#">news</a></li>
+						<li><a href="#">sitemap</a></li>				
+					</ul>
+				</nav>
+			</div>
+			<!-- /.header-top -->
+			<div id="modelText">
+				<div class="model">
+					<img src="images/visual_img.png" alt="전속모델" />
+				</div>
+				<div class="text">
+					<p>build</p>
+					<p>your</p>
+					<p>body</p>
+				</div>
+			</div>
+		</div>
+	</header>
+	<nav class="main-nav"><!-- div보다 의미있는 태그(컴퓨터가 인식하기 편함), section과 색상이 달라서 밖에 따로 둠. -->
+			<ul id="gnb"><!-- global navigation bar : gnb  페이지가 바뀌어도 유지되는 네비게이션 -->
+				<li><a href="#">체지방이란?</a>
+					<ul class="lnb"><!-- local navigation bar : LNB -->
+						<li><a href="#">정의</a></li>
+						<li><a href="#">위험성</a></li>
+						<li><a href="#">관리법</a></li>
+					</ul>
+				</li>	
+				<li><a href="#">운동시작하기</a>
+					<ul class="lnb">
+						<li><a href="#">등록비</a></li>
+						<li><a href="#">회원등록</a></li>
+						<li><a href="#">문의하기</a></li>
+						<li><a href="#">문의하기</a></li>
+						<li><a href="#">문의하기</a></li>
+					</ul>
+				</li>
+				<li><a href="#">유산소운동</a>
+					<ul class="lnb">
+						<li><a href="#">걷기</a></li>
+						<li><a href="#">달리기</a></li>
+						<li><a href="#">뛰기</a></li>
+						<li><a href="#">뛰기</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	<section id="main">
+		<h2 class="none">the fitness topics</h2>
+		<article>
+			<h3>topic fo the month</h3>
+			<div class="article-wrap">
+				<div class="ad">
+					<h4>how to burning fat</h4>
+					<p>운동량이 부족한 바쁜 현대인을 위한<br>
+					효율적인 운동방법을 알아보세요</p>
+				</div>
+			</div>	
+		</article>
+		<article>
+			<div class="article-wrap">
+				<ul class="topic-list">
+					<li>
+						<p class="list-tilte">sports of the month</p>
+						<figure>
+							<img src="https://picsum.photos/id/100/600/300" alt="inline skate" />
+							<figcaption class="none">이달의 스포츠 : 인라인</figcaption>
+						</figure>
+						<p class="list-desc">
+							요즘 새롭게 각광받고 있는 레포츠 인라인!<br>
+							다이어트에도 그만이죠.
+						</p>
+					</li>
+					<li>
+						<p class="list-tilte">member of the month</p>
+						<figure>
+							<img src="https://picsum.photos/id/102/600/300" alt="new corner" />
+							<figcaption class="none">새롭게 신설된 코너</figcaption>
+						</figure>
+						<p class="list-desc">
+							새롭게 신설된 코너~<br>
+							지금 신청하세요!
+						</p>
+					</li>	
+				</ul>
+			</div>
+		</article>	
+	</section>
+	<aside>
+		<div class="banner">
+			<a href="#">
+				<img src="images/side_banner.jpg" alt="banner" />
+			</a>
+		</div>
+	</aside>
+	<footer>
+		<hr>
+		<div class="footer-wrap">
+			<p class="site-name">the fitness</p>
+			<p>copyright&copy; the fitness. all right reserved.</p>
+		</div>
+	</footer>
+	<script src="script/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>onemile</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.">
+</head>
+<body>
+	<h1 class="blind">onemile - Halo city 전기자전거</h1>
+	<header>
+		<div class="header-wrap">
+			<div class="logo">
+				<a href="#">
+					<img src="images/logo.png" alt="onemile" />
+				</a>
+			</div>
+			<nav class="main-nav">
+				<ul id="gnb">
+					<li><a href="#">원마일</a></li>
+					<li><a href="#">라이프</a></li>
+					<li><a href="#">제품구매</a></li>
+					<li><a href="#">커퓨니티</a></li>
+				</ul>
+			</nav>
+			<div id="top-icons">
+				<a href="#">
+					<img src="images/top_icon1.png" alt="top_icon1" />
+				</a>
+				<a href="#">
+					<img src="images/top_icon2.png" alt="top_icon2" />
+				</a>
+				<a href="#">
+					<img src="images/top_icon3.png" alt="top_icon3" />
+				</a>
+			</div>
+		</div>
+	</header>
+	<section id="main"></section>
+	<footer></footer>
+	
+</body>
+</html>

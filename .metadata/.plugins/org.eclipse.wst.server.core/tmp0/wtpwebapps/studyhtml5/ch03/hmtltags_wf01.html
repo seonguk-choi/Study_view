@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>웹 폼 태그연습</title>
+</head>
+<body>
+	<h1>Html5에서 폼을 구성하는 방법</h1>
+	<p>웹 폼 태그는 사용자의 입력을 받기위한 화면을 구성할 때 주로 사용합니다. 예를 들어 입력막대, 체크박스, 버튼, 콤보상자등이 바로 그것(=폼, 폼요소)입니다.</p>
+	<h2>폼 예제</h2>
+	<p>검색 폼을 만들어 봅시다</p>
+	<!-- <form>
+		<label for="name">이름</label>
+		<input type="text" id="name" placeholder="사원명이나 사번을 입력하세요"/>
+	</form> -->
+	<form autocomplete="off">
+		<fieldset><!-- p.113 -->
+			<legend>인적사항</legend>
+			<ul>
+				<li>
+					<label for="name">이름</label>
+					<input type="text" name="name" id="name" />
+				</li>
+				<li>
+					<label for="password">비밀번호</label>
+					<input type="text" name="password" id="password" />
+				</li>
+				<li>
+					<label for="password2">비밀번호 확인</label>
+					<input type="text" name="password2" id="password2" />
+				</li>
+				<li>
+					<label for="email">이메일</label>
+					<input type="text" name="email" id="email" />
+				</li>
+				<li>
+					<label for="phone">전화번호</label>
+					<input type="text" name="phone" id="phone" />
+				</li>
+			</ul>
+		</fieldset>
+		<fieldset><!-- p.114 -->
+			<legend>취미</legend>
+			<input type="checkbox" name="h1" id="h1" />
+			<label for="h1">낮잠</label>
+			<input type="checkbox" name="h2" id="h2" />
+			<label for="h2">Tv시청</label>
+			<input type="checkbox" name="h3" id="h3" />
+			<label for="h3">독서</label>
+		</fieldset>
+		<fieldset>
+			<legend>기혼여부</legend> <!-- p.146 -->
+			<input type="radio" name="married" id="m1" />
+			<label for="m1">기혼</label>
+			<input type="radio" name="single" id="m2"/>	
+			<label for="m2">미혼</label>
+		</fieldset>
+		<input type="submit" value="가입" id="confirm" />
+		<input type="reset" value="취소" id="cancel" />
+	</form>
+	<!-- p.117 페이지 이동 기술 -->
+	<script>
+		let confirm = document.querySelector("#confirm");
+		confirm.addEventListener("click", function(){
+			alert("회원 가입이 완료 되었습니다.\n첫페이지로 이동합니다.");
+			location.href="http://naver.com";
+		});
+	</script>
+	
+	
+	
+	
+</body>
+</html>

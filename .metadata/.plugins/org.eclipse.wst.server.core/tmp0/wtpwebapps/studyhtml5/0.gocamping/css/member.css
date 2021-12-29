@@ -1,0 +1,126 @@
+@charset "UTF-8";
+.blind {
+	display: none;
+}
+.border0 {
+	border: 0 !important; /* 아이디 선택자보다 우선해서 강제적용 */
+}
+.auto-height {
+	height: auto !important;/* footer와 겹쳤을 때 높이를 자동으로 중앙으로 보냄 */
+}
+.main-wrap{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.main-wrap h2, .main-wrap h3 {
+	text-align: center;
+	margin: 2rem 0;	
+}
+.main-wrap h2{
+	font-size: 2rem;
+}
+.main-wrap h3{
+	font-size: 1.25rem;
+	text-transform: capitalize;
+}
+.form-wrap{
+	width: 800px;
+	height: 440px;
+	margin: 0 auto;
+	box-sizing: border-box; /* 박스 크기 고정 */
+	padding: 50px;
+	border: 1px solid #01c545;
+}
+.form-wrap li {
+	margin: 20px 0;
+}
+label { /* 태그선택자 원래 label 스타일을 새롭게 정의*/
+ 	display: inline-block;
+ 	width: 20%;/* 1rem == 16px == 100% */	
+ 	font-size: 1.125rem;
+ 	font-weight: bold;
+}
+label+input {
+	width: 79%;
+	box-sizing: border-box;
+	height: 60px;
+	font-size: 1.125rem;
+	text-indent: 1rem;
+}
+.btns {
+	display: flex;
+	justify-content: center;
+	margin: 30px 0 0 0;
+}
+#submitBtn {
+	border-radius: 30px; /* 테두리 반경 : (값 max -> 원 */
+	border: 1px solid #2A3D4B;
+	background: #CBE16C;
+	width: 200px;
+	height: 60px;
+	color: white;
+	font-size: 1.125rem;
+	margin: 0 20px 0 0;
+}
+#regBtn {
+	border-radius: 30px; /* 테두리 반경 : (값 max -> 원 */
+	border: 1px solid #2A3D4B;
+	background: #B2A498;
+	width: 200px;
+	height: 60px;
+	color: white;
+	font-size: 1.125rem;
+}
+#userId {
+	width: 60%;
+}
+#idCheck {
+	width: 18.5%;
+	height: 60px;
+	vertical-align: top;
+}
+#userMail {
+	width: 40%;
+}
+#at {
+	margin: 0 3%;
+}
+#mailList {
+	width: 30%;
+	height: 60px;
+	text-align: center;
+	font-size: 1.125rem;
+}
+
+/* ======================= modal window =================== */
+#modal {
+	display: none;/* 안보이기 */
+	/*position: static; 위치 기본값 */
+	/* position: absolute; */ /* 절대적인, 내가 원하는 데로 어디든(아래와 겹쳐진다.) */
+	position: fixed;/* 화면전체값 */
+	background: rgba(0,0,0,.7); /* RGB투명도값 : 검정(0, 0, 0), 70% */
+	width: 100vw;/* viewport width :vw */
+	height: 100vh;/* viewport height :vh */
+	z-index: 9999;/* 페이지에 놓이는 순서 : 가장 최상위로 놓인다. */
+}
+.modal-box{
+	position: absolute;
+	left: 50%;
+	margin-left: -25%;
+	top:50%;
+	margin-top: -300px;
+	bottom:;
+	right:;
+	width: 50%;
+	height: 600px;
+	background: #f2f2f2;
+}
+#modalExit {
+	position: absolute;
+	right: 50px;
+	top: 50px;
+	background: #191919;
+	padding: 50px;
+	color: white;
+	font-size: 2rem;
+}

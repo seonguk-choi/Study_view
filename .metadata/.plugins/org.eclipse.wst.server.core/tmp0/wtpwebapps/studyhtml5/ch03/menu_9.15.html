@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>식단표</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<style>
+	table, td, th {	
+		border: 1px solid #333;  
+		border-collapse: collapse;
+	}
+	th { background-color: #ccc;
+		 color: white;
+	}
+	
+	td, th {
+		padding: 10px 15px; /* 패팅(안 여백) 상,하 10px 좌우 15px 여백적용 */	
+		width: 100px;
+		text-align: center;
+	}	
+	h1, figcaption { text-align: center;}
+	#menu-table {
+		width: 60%;
+		margin: 0 auto;
+	}
+	</style>
+	
+</head>
+<body>
+	<input type="checkbox" />
+	<input type="checkbox" />
+	<h1>식단표</h1>
+	<figure>
+	<figcaption>식단표</figcaption>
+	<table id="menu-table">
+		<tr>
+			<th>식사/요일</th>
+			<th>월</th>
+			<th>화</th>
+			<th>수</th>
+			<th>목</th>
+			<th>금</th>
+			<th>비고</th>
+		</tr>
+		<tr>
+			<th>아침</th>
+			<td>된장찌개</td>
+			<td>김치찌개</td>
+			<td rowspan="3">정기<br>휴무</td>
+			<td>샐러드</td>
+			<td>샌드위치</td>
+			<td rowspan="3">비고</td>
+		</tr>
+		<tr>
+			<th>점심</th>
+			<td>호박야채볶음</td>
+			<td>갈비탕</td>
+			<!-- <td>닭볶음탕</td> -->
+			<td>찜닭</td>
+			<td>무조림</td>
+		</tr>
+				<tr>
+			<th>저녁</th>
+			<td>고추간장치킨</td>
+			<td>콤비네이션피자</td>
+			<!-- <td>짜장면</td> -->
+			<td>육계장</td>
+			<td>치맥</td>
+		</tr>
+	</table>
+	</figure>
+</body>
+</html>

@@ -1,0 +1,120 @@
+@charset "UTF-8";
+.hide {
+	display: none;
+}
+#header-top{
+	width: 1100px;
+	padding-bottom: 30px 0 ;
+	margin: 0 auto;
+}
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 50px;
+}
+.nav ul {
+	display: flex;
+	column-gap: 20px;
+	letter-spacing: .1rem;
+	padding: 0 100px;
+}
+.nav a {
+	text-decoration: none;
+} 
+.nav li{
+	vertical-align: middle;/* 출력안됨. */
+}
+/* ------------------------------------------------------ */
+.carousel {
+	width: 1100px;
+	padding: 30px 0 ;
+	margin: 0 auto;
+}
+.carousel img{
+	width: 1100px;
+	height: 400px;
+	text-align: center;
+}
+/* ------------------------------------------------------ */
+#article1 {
+	width: 1100px;
+	padding: 30px 0 ;
+	margin: 0 auto;
+}
+#article1 h3 {
+	color: green; 
+	font-size: 2rem;
+	text-align: center;
+	padding: 20px 0;
+	font-weight: bold;
+}
+#aboutme ul {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 50px;
+}
+#aboutme figcaption {
+	padding: 10px 0;
+	text-align: center;
+	font-weight: bold;
+
+}
+/* ------------------------------------------------------ */
+#skill {
+	background: #E1E6FD;
+	width: 1100px;
+	padding: 30px 0 ;
+	margin: 0 auto;
+}
+#article2 h3 {
+	color: green; 
+	font-size: 2rem;
+	text-align: center;
+	padding: 20px 0;
+	font-weight: bold;
+}
+#skill ul {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 50px;
+}
+#skill figcaption {
+	padding: 10px 0;
+	text-align: center;
+	font-weight: bold;
+}
+/* ------------------------------------------------------ */
+#contect {
+	width: 1100px;
+	padding: 30px 0 ;
+	margin: 0 auto;
+}
+#aside h3 { /* 출력 안됨. */
+	color: green; 
+	font-size: 2rem;
+	text-align: center;
+	padding: 20px 0;
+	font-weight: bold;
+}
+#contect ul {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 50px;
+}
+#contect figcaption {
+	padding: 10px 0;
+	text-align: center;
+	font-weight: bold;
+}
+/* ------------------------------------------------------ */
+#footer {
+	width: 1100px;
+	padding: 50px 0 ;
+	margin: 0 auto;
+	
+}
+#footer p {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 50px;
+}

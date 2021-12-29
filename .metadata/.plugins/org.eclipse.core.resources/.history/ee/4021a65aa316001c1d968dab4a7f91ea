@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>개발자 Seonguk Choi</title>
+</head>
+<body>
+	<header>
+		<img src="images/header-image.png" alt="무료 로고" />
+		<nav>
+			<ul>
+				<li><a href="#"></a>처음으로</li>
+				<li><a href="#"></a>소개</li>
+				<li><a href="#"></a>스킬</li>
+				<li><a href="#"></a>연락처</li>
+				<li><a href="#"></a>요청</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="carousel">
+		<img src="큰사진" alt="느낌있는 걸로" />	
+	</div>
+	<section>
+		<h2>나의 소개</h2>
+		<article>
+			<h2>About Me</h2>
+			<h3>나의 장점</h3>
+			<ul>
+				<li>
+					<figure>
+					<figcaption><img src="장점아이콘1" alt="장점1" /></figcaption>
+					<h4>매일 명상과 운동을 합니다.</h4>
+					</figure>
+				</li>
+				<li>
+					<figure>
+					<figcaption><img src="장점아이콘2" alt="장점2" /></figcaption>
+					<h4>자기관리를 철저히 합니다.</h4>
+					</figure>
+				</li>
+				<li>
+					<figure>
+					<figcaption><img src="장점아이콘3" alt="정점3" /></figcaption>
+					<h4>새로운 것을 잘 받아드립니다.</h4>
+					</figure>
+				</li>
+			</ul>
+		</article>
+		<article>
+			<h2>Skills</h2>
+			<h3>스킬</h3>
+			<ul>
+				<li>
+					<figure>
+					<figcaption><img src="Skills1" alt="스킬1" /></figcaption>
+					<h4>Java</h4>
+					</figure>
+				</li>
+				<li>
+					<figure>
+					<figcaption><img src="Skill2" alt="스킬2" /></figcaption>
+					<h4>IoT</h4>
+					</figure>
+				</li>
+				<li>
+					<figure>
+					<figcaption><img src="Skill3" alt="스킬3" /></figcaption>
+					<h4>HTML</h4>
+					</figure>
+				</li>
+			</ul>
+		</article>
+	</section>	
+	<aside>
+		<h2>contact</h2>
+		<h3>작업의뢰/요청</h3>
+		<ul>
+				<li>
+					<figure>
+					<figcaption><img src="Quest1" alt="요청1" /></figcaption>
+					<h4>cabin2351@gmail.com</h4>
+					</figure>
+				</li>
+				<li>
+					<figure>
+					<figcaption><img src="Quest2" alt="요청2" /></figcaption>
+					<h4>010 . 3865 . 2153</h4>
+					</figure>
+				</li>
+				<li>
+					<figure>
+					<figcaption><img src="Quest3" alt="요청3" /></figcaption>
+					<h4>in2thepeace</h4>
+					</figure>
+				</li>
+			</ul>
+	</aside>
+	<footer>
+		<p>&copy; choi.</p>
+		<p>갖고 가서 널리 알려주세요.</p>
+	</footer>
+	
+</body>
+</html>

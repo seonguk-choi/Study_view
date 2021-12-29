@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<script>
+	$(function(){
+		//검색 클릭했을때
+		$("button").click(function(){
+			console.log("입력한 문자열 : " + $("input[type=text]").val());//get
+			$("input[type=text]").val("한울직업전문학교");//set
+		});
+		$("#b1").click(function(){
+			console.log("body의 border 속성 : " + $("#b1").css("border"));//style을 알아오기만 함 //get
+			$("body").css("background-color", "gold"); //set
+		});
+	});	
+	</script>
+</head>
+<body>
+	<h1>검색</h1>
+	<form method="get" action="search.js" onsubmit="return false;">
+		<input type="text" id="keyword" placeholder="추천 검색어 : 한울">
+		<button>검색</button>
+	</form>
+	<button id="b1">배경색 바꾸기</button>
+</body>
+</html>

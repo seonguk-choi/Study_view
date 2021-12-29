@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+/*  ---------------------------
+	개발부서 : 웹개발팀
+	담당 : 최성욱
+	연락처 : 010 - 3865 - 2153
+	---------------------------
+*/
+/* 초기화 이후 추가 코드 */
+body {
+	font-family: 'Nanum Gothic', sans-serif; /* 글꼴 */
+	collor: black;
+}
+a, a:link {
+	color: inherit;/* 글자 색상 inherit 부모 정보 상속 */
+	text-decoration: none;/* 꾸밈 없음 */
+}
+.blind {
+	display: none; /* 표시 안함(코드에만 남고 공간도 감춤) */
+}
+
+ /* header 영역 - 사이트 소개와 내비게이션이 오는 곳 */
+ #header-wrap {
+ 	width: 1100px; /* 가로 폭 1100px 크기 제한, 100% */
+ 	margin: 0 auto;/* 가로 가운데 배치 */
+ 	display: flex; /* 옆으로 나란히(IE 11에서 버그) */
+ 	justify-content: space-between; /* 양끝 배치, 나머지 공간 분배 */
+ 	align-items: center; /* 수직 중앙 배치 */
+ 	padding: 20px 0; /* 상하 20px (안)여백 추가 */
+ }
+#gnb {
+	display: flex;
+	column-gap: 20px; 
+	}
+#gnb li {
+	margin: 0 10px; /* 바깥 여백 : 좌, 우 10px씩 */
+}
+
+
+/* carousel 영역 : 캐러셀 이미지, 슬라이드 이미지 등 */
+.carousel {
+	background: gold; /* 공간 확인용 작업끝나고 지운다 */
+	min-height: 450px; /* 캐러셀의 최대 높이 지정 */
+	overflow: hidden; /* 넘어가는 부분은 숨김 */
+}
+.carousel img { /* 캐러셀 클래스 안에 있는 img태그 */
+	width: 100%; /* 넓이를 가로로 가득 채움 */
+	margin: 0 auto;
+}
+
+/* section : 본문, article 등을 삽입 */
+.article-wrap {
+	max-width: 1100px; /* max 최대큰기 mini 최소 절대값 공간이 고정 크기를 못 벗아남 -> 반응형 웹서비스 만들때 사용 */
+	margin: 0 auto;
+}
+.article-wrap h2, .article-wrap h3 {
+	text-align: center;
+	margin: 30px 0; /* 상, 하 (바깥)여백 30px */
+}
+.char-list, .skill-list{
+	display: flex;
+	justify-content: space-between;
+}
+.article-bg {
+	background: #E1E6FD; /* 배경색상 : 16진수(HEX) A~F, 0~9 VS rgb(r, g, b) VS rgba(r, g, b, a) */
+	padding: 30px;
+}
+article > h2, article > h3 { /* 자식(children) 선택자 : > */
+	text-align: center;
+	margin: 30px 0; /* 상하 30px 좌우 0px */
+}
+
+/* aside : 광고, 검색, 부가적인 내용 */
+.aside-wrap {
+	width: 1100px;
+	margin: 0 auto;
+}
+.contact-list {
+	display: flex;
+	justify-content: space-between;
+}
+.aside-wrap h2, .aside-wrap h3 {
+	text-align: center;
+	margin: 30px 0;	
+}
+
+/* footer 제작자의 이름, 주소, 연락처 등 저작관 관련 내용 */
+#footer-wrap {
+	max-width: 1100px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	padding: 50px 0 ;
+}
+
+li {
+	text-align: center;
+}

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>WIDMICE</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="images/favicon.png" /><!-- favicon -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- <link rel="stylesheet" href="css/style.css" media="screen and (max-width : 768px)" > -->
+	<!-- <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width:480px)" /> --><!--mobile 반응형 -->
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script> <!-- jquery CDN -->
+</head>
+<body>
+	<h1 class="notext">widmice</h1>
+	<div class="wrapper">
+		<div id="side">
+			<ul id="snb"><!--  global navigation bar -->
+				<li><a href="company.html">company</a>	</li>
+				<li><a href="#">business area</a></li>
+				<li><a href="#">portfolio</a></li>
+				<li><a href="#">contact us</a></li>
+			</ul>
+			<div class="snb-icons">
+				<a href="#"><img src="images/topicon1.png" alt="mypage">&nbsp;my menu</a><!-- &nbsp; 스페이스바 1번 -->			
+				<a href="#"><img src="images/topicon2.png" alt="login">&nbsp;login</a>
+			</div>
+		</div>		
+		<header><!-- 로고, 내비게이션, 사이트소개(title, subtitle) -->
+			<h2 class="notext">widmice 해더영역</h2>
+			<div class="header-wrap">
+				<div id="logo">
+					<a href="">
+						<img src="images/logo.png" alt="widmice" /><!-- alt 10자 내외 -->
+					</a>
+				</div>
+				<nav class="mainNav">
+					<h3 class="notext">widmice 메인 내비게이션</h3>
+					<ul id="gnb">
+						<li>
+							<a href="company.html">company</a>
+							<!-- <div class="lnb-bg">
+								<ul class="lnb">
+									<li><a href="#">인사말</a></li>
+									<li><a href="#">연혁</a></li>
+									<li><a href="#">오시는길</a></li>
+								</ul>
+							</div> -->
+						</li>
+						<li>
+							<a href="#">business area</a>
+							
+						</li>
+						<li><a href="#">portfolio</a></li>
+						<li><a href="#">contact us</a></li>
+					</ul>
+				</nav>
+				<div class="member"><!-- 아래처럼 해도 되나 리스트로 묶어두면 나중에 확장하기 좋다. -->
+					<a href="#"><img src="images/topicon1.png" alt="mypage">&nbsp;my menu</a><!-- &nbsp; 스페이스바 1번 -->
+					<a href="#"><img src="images/topicon2.png" alt="login">&nbsp;login</a>
+				</div>
+				<!-- burger menu : 햄버거를 옆에서 본 모양(은유, 메타포) -->
+				<div id="burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</header>
+		<section class="hero"><!-- 우리 이목을 끄는 부분 carousel, hero -->
+		 	<h2 class="notext">widmice 대표이미지, 슬로건등</h2>
+		 	<div class="hero-wrap">
+		 		<div class="balloon">
+		 			<img src="images/visual_img.png" alt="열기구" />
+		 		</div>
+		 		<div class="slogan">
+		 			<p><span class="color1">wid</span><span class="color2">mice</span></p><!-- span 단순하게 색상만 변경할때 -->
+		 			<hr>
+		 			<p>최고의 파트너쉽과<br>품격있는 서비스!</p>
+		 		</div>
+		 	</div>
+		</section>
+		<section id="main">
+			<h2 class="notext">widmice 회사소개, 서비스 분야</h2>
+			<article>
+				<hgroup>
+					<h3>company</h3>
+					<h4>위드마이스 소개</h4>
+				</hgroup>
+				<h5>대표인사말</h5>
+				<p>위드마이스 대표 홍길동입니다., consectetur adipisicing elit. Iusto voluptatem sunt ipsum dolorem eligendi dignissimos suscipit pariatur libero animi consectetur cupiditate fugit at ex quam ducimus excepturi sequi ut facilis?</p>
+				<p>위드마이스는 어쩌고하고, consectetur adipisicing elit. Iusto voluptatem sunt ipsum dolorem eligendi dignissimos suscipit pariatur libero animi consectetur cupiditate fugit at ex quam ducimus excepturi sequi ut facilis?</p>
+				<p>국제회의, 컨퍼런스, 보상관광등~ consectetur adipisicing elit. Iusto voluptatem sunt ipsum dolorem eligendi dignissimos suscipit pariatur libero animi consectetur cupiditate fugit at ex quam ducimus excepturi sequi ut facilis?</p>
+				<p>합니다. ipsum dolor sit amet, consectetur adipisicing elit. Iusto voluptatem sunt ipsum dolorem eligendi dignissimos suscipit pariatur libero animi consectetur cupiditate fugit at ex quam ducimus excepturi sequi ut facilis?</p>
+				<h5>연력</h5>
+				<ul class="company-history">
+					<li>2012.9 창업</li>
+					<li>2015.3 업무협약</li>
+					<li>2015.4 비엔날레 개최</li>
+					<li>2016.1 기후환경협약회의 유치</li>
+					<li>2017.2 코로나19회의 유치</li>
+				</ul>
+			</article>
+		</section>
+		<footer>
+			<h2 class="notext">widmice 사이트 관리정보, 저작권 정보</h2>
+			<div class="footer-wrap">
+				<div id="logo2">
+					<img src="images/footer_logo.png" alt="widmice" />
+				</div>
+				<div class="site-info">
+					<address>
+						<p>(주)위드마이스    대표자 : 강정환, 이윤아    주소 : 아직 구하지 못했음    고객센터 : 062-1234-5678    개인정보관리책임자 : 할사람 손들어봐요</p>
+						<p>COPYRIGHT&copy; <b class="bi">widimce</b>. all right reserved.</p>
+					</address>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script>
+	//단순 스크린 사이즈 확인용
+	/* let bw = screen.availWidth;
+	let bh = screen.availHeight;
+	alert(bw+ 'x' +bh) */
+	/* let BURGER = document.querySelector("#burger");
+	
+	BURGER.addEventListener("click tap", function() {
+		//BURGER를 click하면 할 일을 적습니다.
+		this.classList.add="active";
+	} */
+	  $(function(){
+	        $("#burger").click(function(){
+	             $(this).toggleClass("active");
+	             $("#side").toggleClass("easeIn");
+	             /* $("#snb").toggle(); 불필요한 코드*/
+	            /*  $("html, body").css({
+	            	 overflow: hidden;
+	             }); */
+	        }); 
+	        $("#topBTN").click(function(){
+	        	$("html, body").animate({
+	        		scrollTop: 0
+	        	});
+	        });
+	    });
+	</script>
+</body>
+</html>

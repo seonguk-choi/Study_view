@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+*,
+*::before,
+*::after{
+	box-sizing: border-box;
+}
+body {
+	font: 16px/1.5 "Noto Sans KR", sans-serif;
+	color: #191919;
+}
+a, a:link {
+	color: inherit;
+	text-decoration: none;
+}
+form {
+	margin: 0;
+	padding: 0;
+}
+ /* header design */
+.header-wrap {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;/* 주축(가로,row) 정령: 공간균등 */
+	align-items: center;/* 교차축(세로column) 정려이 세로가운데 */
+}
+#logo img {
+	width: 150px;
+	height: 150px;
+}
+#gnb {
+	display: flex;
+	margin-left: auto;
+}
+#gnb > li {
+	margin: 0 20px;
+}
+#search {
+	vertical-align: top;
+}
+#search input{
+	float: left; /* 부유물을 왼쪽으로 띄운다*/
+	height: 40px;
+}
+#searchKey {
+	width: 200px;
+	height: 40px;
+	border-radius: 40px;/* 모퉁이 : 반경(둥글게) */
+	border-style: solid;
+	margin-right: 5px;
+}
+/* big-img visual */
+.big-img {
+	height: 400px;
+	overflow: hidden; /* 넘치면 숨긴다. */
+	/* position: relative; */ /* 원하는 구도를 맞출때 */
+	background: url("../images/main.png") center / cover; /* bottom center */
+	/* ../ 현재 파일 기준으로 밖으로 나가라 */
+	position: relative;/* 위치 : 상대적인 기준 */
+}
+.big-img > p {
+	color: black;
+	font-size: 1.250rem;
+	letter-spacing: .5rem;
+	position: absolute;
+	left: 20%;
+	top: 40%;
+}
+/*.big-img figure{
+	margin-top: -100px;
+	position: absolute; 사진을 바로 위로 덮는다
+	width: 100%;
+	heihgt: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-70%);
+	padding-bottom: 56.25%; */
+}
+.big-img img {
+	max-height: 50%; /* 화면폭에 100% 맞춘다. */
+}
+
+/* footer design */
+footer hr {
+	margin: 50px 0;
+}
+.footer-wrap {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#logo2 img {
+	width: 150px;
+	height: 150px;
+}
+#sns {
+	display: flex;
+}
+#sns li {
+	margin: 0 10px;
+}

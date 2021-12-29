@@ -1,0 +1,118 @@
+@charset "UTF-8";
+:root {
+	--main-color: black;
+	--sub-color:#005891;
+	--point-color: navy;
+	--txt1-color: #555555;
+}
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 16px;
+	line-height: 1.5; /* 줄높이 기본값의 1.5배 */
+	color: var(--main-color);
+}
+.blind {
+	text-indent: -9999px;
+	font-size: 0;
+	height: 0;
+	overflow: hidden;
+}
+a, a:link {
+	color: inherit; /* 색상 : 부모에서 상속 */
+	text-decoration: none; /* 글자꾸임 : (밑줄) 없음 */
+}
+/* -----------------------LAYOUT---------------------- */
+/* 01. header  */
+header{
+	overflow: hidden;
+}
+.main-logo{
+	width: 100px;
+	height: 110px;
+	margin: 50px auto;
+}
+#gnb {
+	display: flex;
+	margin: 0 auto;
+	justify-content: center;
+	background: var(--sub-color);
+	padding: 15px;
+	column-gap: 15px;
+}
+#gnb a {
+	color: gold;
+}
+/*02. carousel */
+#hero {
+	/* display: flex;
+	justify-content: center; */
+	text-align: center; /* 이미지 -> 글자 취급 */
+	/* row-gap: 20px; */
+	margin: 20px 0;
+}
+/* 03. main */
+hgroup{
+	text-align: center;
+	margin: 30px 0;
+}
+hgroup h2{
+	text-transform: uppercase; /* uppercase 대문자 rowcase 소문자 capitalize 첫글자 대문자*/	
+	font-size: 22px;
+}
+hgroup h3{
+	font-size: 16px;
+	color: var(--text1-color)
+}
+#movies{
+	display: flex;
+	justify-content: center;
+	margin: 20px 0 ;
+}
+/* 04. aside  */
+#social {
+	font-size: 0; /* inline의 간격을 조절 */
+	text-align: center;
+	margin: 50px 0;
+}
+#social li {
+	display: inline-block; /* flex는 붙어있지만 글자 가독성을 위해 자동을 떨어짐. */
+}
+#social p{
+	font-size: 15px;
+}
+.center-info {
+	text-align: center;
+	margin: 30px 0;
+}
+.center-info h3{
+	text-transform: uppercase;
+	font-size: 15px;
+	color: var(--sub-color);
+}
+.center-info p{
+	font-size: 30px;
+	font-weight: bold;
+	color: var(--sub-color);
+}
+/* 05. footer */
+hr {
+	border: 0px;
+	height: 1px;
+	margin: 30px 0 ;
+	background: var(--sub-color);/* 테두리 색상 */
+	border-style: dashed; /* 테두리 종류 */
+}
+footer{
+	padding: 30px 0;
+}
+address{
+	text-align: center;
+}
+address p {
+	text-transform: uppercase;
+}

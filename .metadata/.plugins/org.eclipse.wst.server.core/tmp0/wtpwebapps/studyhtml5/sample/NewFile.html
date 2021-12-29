@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+* {
+	padding: 0px;
+	margin: 0px;
+}
+a{
+	text-decoration: none;	
+	font-weight:bold;
+	color: black;
+	
+}
+ul{
+	overflow: hidden;
+	margin: 0 auto; /* 가운데 정령, 반드시 width가 존재 */
+	display: table;	/* width 모르는 상태에서 margin과 사용 */
+	
+	/* display: flex;
+	justify-content: center; */
+}
+ul li {
+	float: left;
+	list-style: none;
+}
+ul a {/* <- 밑에있는 모든 후손 a(자식 + 손자 + ..)까지 전부 영향을 줌 */
+}
+
+ul>li>a { /* <- > 바로밑에 자식에게만 영향을 줌 */
+	display: block; /* inline형ㅅ기 태그를 block으로 변화 , 
+					   숨겨놓은 태그를 보여주는 태그로 변환 */
+	border: 1px solid black;
+	padding: 10px 30px;
+	/* margin-left: -1px; */ /* 선을 1px 겹친다. */
+	/*width: 150px;
+	height: 50px;
+	line-height: 50px;  height와 line-height 동시 같은 값 주면 세로 가운데 정령
+	text-align: center; padding 주면 위데 4가지 할필요없음 */ 
+}
+
+/* inline형식 태그 : span, label, img, a, input, 
+글자형식태그(b, i, small, sub, sup, ins, del)
+<- 옆으로 나란히 정령, 크기를 갖을 수 없음(여백 등 지정 불가능) */
+
+/* block형식 태그 : div, h1 ~ h6, p, li, table, form 등
+   <- 블록처럼 쌓여짐, 크기, 여백 등 가질 수 있음*/
+
+ul li:nth-child(2n+1) a {/*li:nth-child(2n+1) li 홀수번째 엥커에 적용  */
+	background-color: green;
+}
+ul li:nth-child(2n) a {/*li:nth-child(2n+1) li 짝수번째 엥커에 적용  */
+	background-color: red;
+	/* border-left: 0px;
+	border-right: 0px; */
+	margin-left: -1px;
+	margin-right: -1px;
+}
+ul li:first-child a {
+	border-radius: 20px 0px 0px 20px;
+}
+ul li:last-child a {
+	border-radius: 0px 20px 20px 0px;
+}
+
+</style>
+</head>
+<body>
+	<ul>
+		<li><a href="http://www.naver.com">네이버</a></li>
+		<li><a href="http://www.google.com">구글</a></li>
+		<li><a href="http://www.youtube.com">유투브</a></li>
+		<li><a href="http://www.daum.net">다음</a></li>
+		<li><a href="http://www.naver.com">네이버뉴스</a></li>
+		<li><a href="http://www.facebook.com">페이스북</a></li>
+		<li><a href="http://www.twitter.com">트위터</a></li>
+	</ul>
+</body>
+</html>

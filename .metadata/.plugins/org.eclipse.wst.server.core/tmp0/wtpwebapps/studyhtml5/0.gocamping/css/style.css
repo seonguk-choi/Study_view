@@ -1,0 +1,12 @@
+@charset "UTF-8";
+.blind {
+	display: none;
+}
+.main-wrap{
+	max-width: 1200px;
+	margin: 0 auto;
+	background: #f2f2f2;
+}
+.main-wrap h2, .main-wrap h3 {
+	text-align: center;
+}

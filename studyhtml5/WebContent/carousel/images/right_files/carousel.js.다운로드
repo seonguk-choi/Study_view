@@ -1,0 +1,120 @@
+(function ($) {
+  $(document).ready(function () {
+
+
+    $('.slider--inner').slick({
+      autoplay: false,
+      speed: 500,
+    });
+
+    $('.slick-arrow').on('click', function() {
+      $('.slider--inner').slick('slickPause');
+  });
+
+
+  });
+
+  $(document).ready(function () {
+
+    $(".selected_currency .currency_name").html(function() {
+      $(this).html() === 'Euro' && $(this).html('EU delivery')
+      $(this).html() === 'Pound sterling' && $(this).html('UK delivery')
+    });
+    $(".currencies li").html(function() {
+      $(".currency_name").html(function() {
+        console.log($(this).html());
+        $(this).html() === 'Euro' && $(this).html('EU delivery')
+        $(this).html() === 'Pound sterling' && $(this).html('UK delivery')
+      })
+      // $(this).html() === 'Euro' && $(this).html('EU store')
+      // $(this).html() === 'Pound sterling' && $(this).html('UK store')
+    });
+
+  });
+
+  $(document).ready(function () {
+
+  $('.remove-eu-popup').click(function(){
+
+    $('.country_popup').css('display', 'none')
+
+    console.log('fire');
+
+    // fire off the request to /redirect.php
+    request = $.ajax({
+        url: "/session",
+        type: "post",
+        data: 'facebook'
+    });
+    
+    // callback handler that will be called on success
+    request.done(function (response, textStatus, jqXHR){
+        // log a message to the console
+        console.log("Hooray, it worked!");
+    });
+    
+    // callback handler that will be called on failure
+    request.fail(function (jqXHR, textStatus, errorThrown){
+        // log the error to the console
+        console.error(
+            "The following error occured: "+
+            textStatus, errorThrown
+        );
+        });
+    });
+  });
+  
+  $(document).ready(function () {
+
+    dropdownElement = $("#billing_country");
+    dropdownElementShipping = $("#shipping_country");
+    const session = $("#selectedStore").text();
+
+    console.log('session'  + session);
+
+    if (session === 'EUR') {
+      dropdownElement.find('option[value=GB]').remove();
+      dropdownElementShipping.find('option[value=GB]').remove();
+    } else {
+      dropdownElement.find('option[value!=GB]').remove();
+      dropdownElementShipping.find('option[value!=GB]').remove();
+    }
+
+    const basketPage = window.location.pathname;
+
+    if (basketPage === '/basket/') {
+      $('.widget_wc_aelia_currencyswitcher_widget').hide();
+    }
+
+    // $('.country_popup').hide();
+    // $('.widget_wc_aelia_currencyswitcher_widget').hide()
+
+});
+
+$(document).ready(function () {
+
+  // const currentStore = $("#current_store");
+  // const storeData = currentStore.attr('data-attribute');
+  // const currentCountry = $("#current_country");
+  // const countryData = currentCountry.attr('data-attribute');
+
+  // let location = ''
+  // let store = ''
+
+  // countryData === 'GB' ? (location = 'UK') : (location = 'EU')
+  // storeData === 'GBP' ? (store = 'UK') : (store = 'EU')
+
+  // setTimeout(function(){ 
+  //    if (store !== location) {
+  //       $('#wc-stripe-payment-request-wrapper').hide()
+  //       $('#wc-stripe-payment-request-button-separator').hide()
+  //       console.log('fire');
+  //    }
+  //   }, 3000);
+  
+});
+
+
+})(jQuery);
+
+

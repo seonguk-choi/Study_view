@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Jquery Carousel</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<style>
+		.carousel {
+			width: 1200px;
+			height: 400px;
+			margin: 0 auto;
+			position: relative;
+			/* 3장 중 1장만 보이게 처리*/
+			overflow: hidden;
+		}
+		
+		#imgs {
+			width: 3600px;
+			height: 400px;
+			transition: all .4s;
+		}
+		
+		#imgs img {
+			float: left;
+		}
+		
+		.btns {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+		
+		#leftBtn {
+			position: absolute;
+			left: 5%;
+			top : 45%;
+			transition: all .4s;
+		}
+		
+		#leftBtn:hover {
+			transform: scale(1.2);
+		}
+		
+		#rightBtn {
+			position: absolute;
+			right: 5%;
+			top : 45%;
+			transition: all .4s;
+		}
+		
+		#rightBtn:hover {
+			transform: scale(1.2);
+		}
+		
+		.btns img {
+			width:70%;
+			heigt:70%;
+		}
+		
+		/* #pageNum {
+			background: rgba(0,0,0,.5) ;
+			color: white;
+			font-size : 2rem;
+			position: absolute;
+			text-align: center;
+			border-radius: 20px;
+			width: 200px;
+			height: 48px;
+			left: 50%;
+			bottom : 5%;
+			transform : translateX(-50%);
+		} */
+		
+		#pager {
+			position: absolute;
+			list-style: none;
+			width: 120px;
+			height: 30px;
+			left: 50%;
+			bottom : 5%;
+			transform : translateX(-50%);
+		}
+		
+		#pager li {
+			background: white;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			display: inline-block;
+		}
+		
+		.active {
+			background: rgba(0,0,0,0.5) !important;
+		}
+		
+	</style>
+</head>
+<body>
+	<h1>Carousel</h1>	
+	<header>
+		<div class="header-wrap">
+			<div id="mainLogo">
+				<a href="#">
+					<img src="https://picsum.photos/id/103/200/200" alt="logo" />
+				</a>
+			</div>
+		</div>
+	</header>
+	<!-- carousel slider -->
+	<div class="carousel">
+		<div id="imgs">
+			<img src="https://picsum.photos/id/30/1200/400" alt="slider1" />
+			<img src="https://picsum.photos/id/60/1200/400" alt="slider2" />
+			<img src="https://picsum.photos/id/20/1200/400" alt="slider3" />
+		</div>
+		<!-- <div id="pageNum">
+		1/3
+		</div> -->
+		<ol id="pager">
+			<li></li>
+			<li></li>
+			<li></li>
+		</ol>
+		<div class="btns">
+			<div id="leftBtn"><img src="images/arrow-left.png" alt="왼쪽이동"></div>
+			<div id="rightBtn"><img src="images/arrow-right.png" alt="오른쪽이동"></div>
+		</div>
+	</div>
+	<section id="main">
+		<h2>본문</h2>
+		<p>1. carousel 제작을 위한 figma 스케치</p>
+		<p>2. css를 이용한 레이아웃 작성, 배치</p>
+		<p>3. javascript / jQuery를 이용한 캐러셀 스크립트 작성</p>
+		
+	</section>
+	<footer>
+		<p>copyright</p>
+	</footer>
+	<script>
+	var currentIndex = 0; //처음 시작하는 슬라이드 요소의 위치 기준 초기화
+	$(function(){
+		//캐러셀 이미지 관련 코드
+		//1. leftBtn 클릭시 할 일
+		
+		//pager 1번 초기화
+		$("#pager > li:nth-child(1)").addClass("active"); // .toggleClass() <-> removeClass()
+		$("#leftBtn").click(function(){
+			// .css() : css 속성을 알아오기(get)
+			// .css(속성, 값) : css 속성을 지정하기(set)
+			// .css({속성1 : 값1, 속성2 : 값2, ...}) : css 속성을 여러개 지정하기(set)
+			
+			//$("#imgs").css("marginLeft", "-1200px"); web 기본단위 px
+			moveLeft();
+		});
+		$("#rightBtn").click(function(){
+			//$("#imgs").css("marginLeft", "+=1200px");
+			moveRight();
+		});
+		
+		$("#pager li").click(function(){
+			pagerClick();
+		});
+	});
+	function moveLeft(){
+		var nextIndex = currentIndex-1; // 왼쪽 1번 누르면, -1로 결정
+		if(nextIndex < 0) nextIndex = 2;
+		currentIndex = nextIndex;
+		pager(nextIndex); //페이지를 조정하는 함수를 호출
+		$("#pageNum").text((currentIndex+1)+" / 3");
+		var nextPos = -1200 * nextIndex;
+		$("#imgs").css("marginLeft", nextPos);
+	}
+	function moveRight(){
+		var nextIndex = currentIndex+1;
+		if(nextIndex >= 3) nextIndex = 0;
+		currentIndex = nextIndex;
+		pager(nextIndex);
+		$("#pageNum").text((currentIndex+1)+" / 3");
+		var nextPos = -1200 * nextIndex;
+		$("#imgs").css("marginLeft", nextPos);
+	}
+	function pager(index){
+	/* 	
+		대상li.addClass("active");
+		대상li의 형제요소.removeClass("active");
+		$("#pager li").siblings(index); 형제요소 선택자
+		$("#pager li").eq(index); 인텍스요소 선택
+	*/
+		$("#pager li").removeClass("active");
+		$("#pager li").eq(index).addClass("active");
+	}
+	function pagerClick(){
+		var nextIndex = ("#pager li").eq(index);
+		pager(nextIndex);
+		var nextPos = -1200 * nextIndex;
+		$("#imgs").css("marginLeft", nextPos);
+	}
+	
+	</script>
+</body>
+</html>
+
+

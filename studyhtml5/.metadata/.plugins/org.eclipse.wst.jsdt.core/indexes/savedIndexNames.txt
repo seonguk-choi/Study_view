@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+C:\coding\Study_view\studyhtml5\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3373477214.index
+1791350360.index
+3154391294.index
+4165639345.index
+152805345.index

@@ -1,0 +1,506 @@
+@charset "UTF-8";
+/
+/* 공통적인 스타일 */
+body {
+	font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+	font-size: 14px;
+	letter-spacing: -1px; /* 자간 */
+	font-weight: 400;
+}
+/* pseudo-class : 의사선택 클래스
+	!! Love, HAte : 순서를 지켜야함 !!
+	a:link {...} <- 링크텍스트
+	a:visited {...} <- 방문한 링크
+	a:hover {...} <- 마우스 오버시 링크
+	a:active {...} <- 마우스 프레스 상태의 링크
+  */
+a, a:link {
+	text-decoration: none;
+	color: inherit;
+}
+.notext {
+	/* display: none; */
+	text-indent: -9999px;
+	height: 0;
+	visibility: hidden;
+}
+/* 디자인 각 영역별 스타일 */
+header {
+	background: rgba(0,0,0,.3);	/* 배경색 검정, 투명도 30%  */
+	position: absolute; /* fixed, relative, sticky(static+absolute) */
+	width: 100%;
+}
+.header-wrap {/* flex container : flex item의 상자 */
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 15px 0;
+	display: flex;
+	justify-content: space-between;/* 수평 : 정렬 */
+	align-items: center; /* flex items의 수직 : 정렬 */
+	color: white;
+}
+#gnb {
+	display: flex;
+}
+#gnb > li{
+	margin: 0 10px;
+	text-transform: uppercase;
+	position: relative;
+}
+#gnb > li > a:hover {
+	color: #58c8f6;
+}
+.lnb-bg {
+	background: #000;
+	position: absolute;
+	width: 100%;
+	top: 55px;
+	left: 0;
+}
+.lnb {
+	position: absolute;
+	top: 35px;
+	width: 100%;
+	background: rgba(0,0,0,.7);
+}
+.member {
+	text-transform: uppercase;
+}
+.member a:nth-child(1) {
+	margin-right: 20px;
+}
+.member img {
+	margin-right: 5px;
+}
+.hero {
+	background: url("../images/visual_bg.jpg") no-repeat 0 0 / cover;/*0 0 : 기준점 cover: 공간을 채움 */
+	height: 800px;
+	display: flex;
+	flex-direction: column; /* flex itmes 방향: 세로 vs 가로(row:기본값)*/
+	justify-content: center;
+}
+.hero-wrap {
+	width: 1000px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+}
+.slogan {
+	font-size: 60px;
+	text-transform: uppercase;
+	color: white;
+	text-align: center;
+}
+.color1 {
+	color: #58c8f6;
+}
+.slogan > hr {
+	border-color: #fff;
+	margin: 5px 0;
+	/* noshade는 obsolete 속성(deprecated), use css instead*/
+	border-style: solid;
+	/* 가장 얇은 선 
+	border: 0;
+	height: 1px;
+	background: white;*/
+}
+.slogan p:nth-last-child(1) {
+	font-size: 46px;
+	text-align: center;
+}
+/* #logo, .mainNav, .member {
+	display: inline-block;
+	vertical-align: top;
+} */
+/* =================== main ============================= */
+/* float 사용시 다음 행에 영향을 줄 수 있고 되돌려주는 방법 3가지
+	1.overflow: hidden;
+	2.clearFix
+	3.display: from-root; <- 모든 브라우저가 지원하는게 아님 */
+article::after {/* clearFix: float 사용으로 레이아웃이 망가지는 걸 방지 */
+	content: '';
+	display: block;
+	clear: both;
+}
+article {
+	margin: 50px 0;
+}
+.article-title {
+	text-align: center;
+	font-size: 30px;
+	font-weight: 600;
+	color: #000;
+	text-transform: uppercase;
+	margin: 100px 0 30px 0;
+}
+.pt-50 {
+	padding-top: 50px;
+}
+.about-company {
+	max-width: 1000px;
+	margin: 0 auto;
+	height: 515px;
+	position: relative;
+	
+}
+.img-building, .img-polygon {
+	width: 50%;
+	float: left;
+	overflow: hidden;
+}
+.img-flight {
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	/* margin-left: -224px;  옛날 방식 중앙맞추기*/
+	transform: translateX(-50%);
+}
+.about-text {
+	position: absolute;
+	width : 50%;
+	left: 50%;
+	top: 35%;
+	box-sizing: border-box;
+	padding: 0 3%;
+}
+.about-text p {
+	font-size: 16px;
+	color: #000;
+	line-height: 1.4; /* 대부분 웹사이트에서 1.4 ~ 1.6 많이 씀 */
+}
+.about-text strong {
+	display: block;
+	font-size: 30px;
+	font-weight: 500;
+	color: #a9a9a9;
+	margin: 10px 0;
+}
+#down {
+	position: absolute;
+	width: 230px;
+	height: 60px;
+	right: 5%;
+	bottom: 10%;
+	border: 0;
+	background: black;
+	color: #fafafa;
+	font-size: 1.125rem;
+	border-radius: 10px;
+}
+/* #down span::before {
+	content: '';
+	position: relative;
+	top: 15px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #fff;
+	border-radius: 10px;
+} */
+#down span::after {
+	content: '';
+	position: relative;
+	top: 15px;
+	border-top : 10px solid #fff;
+	border-right : 10px solid transparent;
+	border-left : 10px solid transparent;
+	border-bottom : 10px solid transparent;
+}
+.article-bg {
+	background: url("../images/bus_bg.jpg") no-repeat center/ cover; /* 수직 수평 중앙에 화면폭에 맞춰 늘려서 배치*/
+}
+.business-list {
+	width: 1000px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.business-list li{ /* flex conainer : 컨네이너 */
+	float: left;
+	width: calc(33.333333333% - 10px);
+	height: 480px;
+	margin: 0 5px;
+	position: relative;
+	overflow: hidden;
+	background:#191919;
+}
+.business-list li:hover img {
+	transform: scale(1.2);
+	opacity: .5;
+}
+.business-list img {
+	max-width: 100%;
+	transform: scale(1.3);
+	transition: all .3s; 
+}
+.business-list li:hover p {
+	bottom: 0;
+}
+.business-list p {
+	background: rgba(0,0,0,.8);
+	color: #fff;
+	font-size: 20px;
+	text-transform: capitalize;
+	text-align: center;
+	padding: 20px 0;
+	position: absolute;
+	width:100%;
+	bottom: -120px;
+	transition: all .3s;
+}
+#topBTN {
+	width:  54px;
+	height: 54px;
+	margin: 0 auto;
+	display: block;
+	background: none;
+	border: 0;
+	position: relative;/* 내가 기준이 됨. */
+	top: 27px;
+}
+/*============== footer ===============  */
+
+.footer-wrap {
+	width: 1000px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;	
+}
+.site-info {
+	text-align: right;
+	line-height: 1.5;
+}
+#snb {
+	display: none;
+}
+/* burger menu */
+#burger {
+	width: 30px;
+	height: 20px;
+	position: relative;
+	display: none;
+}
+#burger > span {
+	display: block; /* span은 inline이라서 자유롭게 바꾸기 위해 block으로 변경 */
+	position: absolute;
+	width:100%;
+	height: 3px;
+	background: white;
+}
+#burger > span:nth-child(2){
+	left: 0;
+	top: 8px;
+}
+#burger > span:nth-child(3){
+	left: 0;
+	bottom: 0;
+}
+/* di값이 burger인 요소에 active라는 클래스가 적용되었을 때 스타일 */
+#burger.active > span:nth-child(1) {
+	transform: rotate(45deg);
+	top: 10px;
+}
+#burger.active > span:nth-child(2) {
+	display: none;
+}
+#burger.active > span:nth-child(3) {
+	transform: rotate(-45deg);
+	top: 10px;
+}
+
+
+/* 반응형 스타일 */
+/* @ : at-rule  */
+@media screen and (max-width : 960px) {/* min : ~이상, max : ~이하 */
+/* 	body{
+		background: lime;
+	} */
+}
+@media screen and (max-width : 768px) {
+/* 	body{
+		background: coral;
+	} */
+}
+@media screen and (max-width: 480px){/* 내핸드폰 사이즈 */
+	.header-wrap {
+		width: 100%;
+		padding-right: 3%;
+		padding-left: 3%;
+		box-sizing: border-box;
+		/* justify-content: space-around; space-between 보다 양 옆보다 여백을 더 준다. */
+	}
+	.mainNav, .member{
+		display: none;
+	}
+	#side {
+		display: block;
+		position: fixed;
+		right: -50%;/* 최종위치 값 */
+		width: 50%;
+		height: 100%;
+		background: rgba(0,0,0,.3);
+		color: white;
+		z-index: 5000;
+		transition: all .3s;
+	}
+	.easeIn{
+		right: 0 !important;
+	}
+	#burger {
+		display: block;
+		z-index: 5001;
+	}
+	.hero {
+		height: 400px;
+		background-position-x: 50%;
+	}
+	.hero-wrap {
+		width: 100%;
+		justify-content: center;
+	}
+	.balloon {
+		display: none;
+	}
+	.slogan {
+		font-size: 3rem;
+		margin-top: 22%;
+	}
+	.slogan > p:nth-last-child(1) {
+		font-size: 2rem;
+	}
+	article {
+		padding : 0;
+	}
+	.img-building {
+		display: none;
+	}
+	.img-polygon {
+		width: 100%;
+		float: none;
+	}
+	.img-flight {
+		width: 90%;
+		top: 5%;
+	}
+	.img-flight > img {
+		max-width: 100%;
+	}
+	#down {
+		display: none;
+	}
+	.about-text {
+		width: 80%;
+		left: 10%;
+		top: 40%;
+	}
+	.business-list {
+		width: 320px;
+	}
+	.business-list li {
+		height: 100px;	
+	}
+	.footer-wrap {
+		width: 100%;
+		margin: 100px auto 50px;
+		flex-direction: column;
+	}
+	#logo2 {
+		text-align: center;
+	}
+	.site-info {
+		text-align: center;
+		padding: 2% 5% 0;
+		box-sizing: border-box;
+	}
+} 
+@media screen and (max-width : 360px) {/* 안드로이드 기본사이즈 */
+	/*body{
+	 	background: gold;
+	} */
+	.header-wrap {
+		width: 100%;
+		padding-right: 3%;
+		padding-left: 3%;
+		box-sizing: border-box;
+		/* justify-content: space-around; space-between 보다 양 옆보다 여백을 더 준다. */
+	}
+	.mainNav, .member{
+		display: none;
+	}
+	#side {
+		display: block;
+		position: fixed;
+		right: -50%;
+		width: 50%;
+		height: 100%;
+		background: rgba(0,0,0,.3);
+		color: white;
+		z-index: 5000;
+	}
+	#burger {
+		display: block;
+		z-index: 5001;
+	}
+	.hero {
+		height: 400px;
+		background-position-x: 50%;
+	}
+	.hero-wrap {
+		width: 100%;
+		justify-content: center;
+	}
+	.balloon {
+		display: none;
+	}
+	.slogan {
+		font-size: 3rem;
+		margin-top: 22%;
+	}
+	.slogan > p:nth-last-child(1) {
+		font-size: 2rem;
+	}
+	article {
+		padding : 0;
+	}
+	.img-building {
+		display: none;
+	}
+	.img-polygon {
+		width: 100%;
+		float: none;
+	}
+	.img-flight {
+		width: 90%;
+		top: 5%;
+	}
+	.img-flight > img {
+		max-width: 100%;
+	}
+	#down {
+		display: none;
+	}
+	.about-text {
+		width: 80%;
+		left: 10%;
+		top: 40%;
+	}
+	.business-list {
+		width: 320px;
+	}
+	.business-list li {
+		height: 100px;	
+	}
+	.footer-wrap {
+		width: 100%;
+		margin: 100px auto 50px;
+		flex-direction: column;
+	}
+	#logo2 {
+		text-align: center;
+	}
+	.site-info {
+		text-align: center;
+		padding: 2% 5% 0;
+		box-sizing: border-box;
+	}
+
+}

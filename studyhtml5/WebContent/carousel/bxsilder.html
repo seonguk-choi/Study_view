@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>bxslider example</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  	<script src="script/main.js"></script>
+  	<link href="css/custom.css" rel="stylesheet"/>
+	<script>
+		$(document).ready(function(){
+			$('.slider').bxSlider({
+				mode: 'vertical',
+				speed: 800,
+				infiniteLoop:true,
+				auto: true,
+				pause: 3000
+			});
+		});
+	</script>
+  	<style>
+  	.bx-wrapper {
+  		border: 0;
+  		-webkit-box-shadow: none;
+  		box-shadow : none;
+  	}
+  	.wrapper {
+  		width: 80%;
+  		margin: 0 auto;
+  	}
+  	</style>
+</head>
+<body>
+	<header>
+	</header>
+	<h1>bxslider example</h1>	
+	<div class="wrapper">
+		<div class="slider">
+				<div><img src="https://picsum.photos/id/30/2000/600" alt="slider1" /></div>
+				<div><img src="https://picsum.photos/id/60/2000/600" alt="slider2" /></div>
+				<div><img src="https://picsum.photos/id/20/2000/600" alt="slider3" /></div>
+		</div>
+	</div>
+	<section></section>
+	<footer></footer>
+</body>
+</html>

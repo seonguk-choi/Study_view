@@ -1,0 +1,11 @@
+<!doctype html>          
+<html lang="en">        
+<head>                       
+    <meta charset="utf-8"> 
+    <title>문서의 제목</title>
+</head>
+<body>                       
+     <h1>처음 만드는 HTML문서</h1>  
+     <p>HTML이란? 인터넷 문서, Hyper Text Markup Language의 약어로, 문서의 형식도 .html로 저장합니다.
+</body>
+</html>

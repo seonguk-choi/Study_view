@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Go캠핑 : 산으로 바다로</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+	<link rel="stylesheet" href="css/design.css">
+	<link rel="stylesheet" href="css/member.css">
+</head>
+<body>
+	<h1 class="blind">go 캠핑 회원가입</h1>
+	<div id="modal">
+		<div class="modal-box">
+			<h2>아이디 중복확인</h2>
+			<button id="modalExit">&times;</button>
+			<input type="text" id="check" />
+			<input type="button" value="확인" id="confirm" />
+			<p>※ 아이디는 특수문자, 영문자, 숫자를 조합하여 12~36자로 만드세요</p>
+			<p>※ 특수문자 중 ~, @, *는 사용하실 수 없습니다.</p>
+		</div>
+	</div>
+	<header>
+		<div class="header-wrap">
+			<div id="logo">
+				<a href="#">
+					<img src="images/logo.png" alt="go캠핑" />
+				</a>
+			</div>
+			<nav>
+				<ul id="gnb">
+					<li><a href="#">소개</a></li>
+					<li><a href="#">캠핑상식</a></li>
+					<li><a href="#">캠핑장비</a></li>
+					<li><a href="#">캠핑지도</a></li>
+				</ul>
+			</nav>
+			<div id="search">
+				<form>
+					<label for="searchKey" class="blind">검색어</label>
+					<input type="search" maxlength="12" name="searchKey" id="searchKey" />
+					<input type="image" src="images/go_btn.png" alt="검색" />		
+				</form>		
+			</div>
+		</div>
+	</header>
+	<div class="big-img">
+		<p>go 캠핑 : 캠핑의 모든 것</p>
+		<!-- <figure>
+			<img src="images/main.png" alt="visual image" />
+			<figcaption class="blind">비주얼 이미지</figcaption>	
+		</figure> -->
+	</div>
+	<section id="main">
+		<div class="main-wrap">
+			<h2>regiter &#124; 회원가입</h2>
+			<h3>go camping membership</h3>
+			<article>
+				<h4 class="blind">회원가입</h4>
+			</article>
+			 <form autocomplete="off">
+			 	<div class="form-wrap border0 auto-height">
+			 		<!-- 회원가입 작성품 -->
+			 		<ul>
+			 			<li>
+			 				<label for="userId">아이디</label> 		
+			 				<input type="text" maxlength="12" placeholder="이메일주소나 계정명" name="userId" id="userId" />
+			 				<!-- <button></button> 블럭요소 -->
+			 				<input type="button" value="아이디 중복확인" id="idCheck" />
+			 			</li>
+			 			<li>
+			 				<label for="userPw">비밀번호</label> 		
+			 				<input type="password" maxlength="16" placeholder="영문자, 특수문자 포함 16자" name="userPw" id="userPw" />
+			 			</li>
+			 			<li>
+			 				<label for="userPw2">비밀번호확인</label> 		
+			 				<input type="password" maxlength="16" placeholder="영문자, 특수문자 포함 16자" name="userPw2" id="userPw2" />
+			 			</li>
+			 			<li>
+			 				<label for="userPhone">전화번호</label> 		
+			 				<input type="tel" maxlength="11" placeholder="-빼고 입력" name="userPhone" id="userPhone" />
+			 			</li>
+			 			<li>
+			 				<label for="userMail">이메일</label> 		
+			 				<!-- <input type="text" placeholder="" name="userMmail" id="userMmail" /> -->
+			 				<input type="text" name="userMail" id="userMail" />
+			 				<span id="at">@</span>
+			 				<select id="mailList">
+			 					<option selected>직접선택</option>
+			 					<option value="naver.com">네이버</option>
+			 					<option value="gmail.com">구글</option>
+			 					<option value="daum.net">다음</option>
+			 				</select>
+			 			</li>
+			 			<li>
+			 				<label for="suggest">추천인ID</label> 		
+			 				<input type="text" placeholder="이메일주소나 계정명" name="suggest" id="suggest" />
+			 			</li>
+			 		</ul>
+			 		<div class="btns">
+			 			<input type="submit" value="가입" id="submitBtn"/>
+			 			<input type="button" value="취소" id="regBtn"/>
+			 		</div>
+			 	</div>
+			 </form>
+			</div>
+	</section>
+	<footer>
+		<hr>
+		<div class="footer-wrap">
+		<div id="logo2">
+				<a href="#">
+					<img src="images/logo.png" alt="go캠핑" />
+				</a>
+			</div>
+		<address>
+			<p>상호 : go캠핑(구.캠핑클럽) 대표자 : 최성욱 사업자 번호 : 1909310</p>
+			<p>전화번호 : 062)345-6789 고객상담 : cs@go-camp.co 개인사업자:</p>		
+			<p>주소 : 광주광역시 서구 광천 1로 123(광천동), 1층 go캠핑</p>
+			<p>&copy; go캠핑. all right reserved.</p>
+		</address>
+		<ul id="sns">
+			<li>
+				<a href="#">
+					<img src="images/kakao_icon.png" alt="kakao" />
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="images/insta_icon.png" alt="insta" />
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img src="images/naver_icon.png" alt="naver" />
+				</a>
+			</li>
+		</ul>
+		<script>
+		const BTN = document.querySelector("#idCheck");
+		const EXIT = document.querySelector("#modalExit");
+		const BODY = document.querySelector("body");
+		/* alert("아이디 중복체크 팝업을 띄웁니다.!!") */
+		//중복확인 창을 호출
+		//1.모달을 찾아
+		//2.그걸 보여줘(display 변경 : none -> blck, flex)
+		
+		EXIT.addEventListener("click", function(){
+			//1.모달을 찾아
+			//2.그걸 닫아줘(display 변경 : none -> blck, flex)
+			const MODAL = document.querySelector("#modal");
+			MODAL.style.display = "none";
+			BODY.style.overflow = "auto";
+		});
+		BTN.addEventListener("click", function(){
+			//1.모달을 찾아
+			//2.그걸 보여줘(display 변경 : none -> blck, flex)
+			const MODAL = document.querySelector("#modal");
+			MODAL.style.display = "block";
+			BODY.style.overflow = "hidden";
+		});
+		</script>
+		
+		
+		
+		
+		
+	</footer>
+</body>
+</html>
